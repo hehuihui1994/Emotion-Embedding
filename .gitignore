@@ -1,0 +1,6 @@
+.DS_Store
+
+embedding/*
+!embedding/*.py
+
+Emotion_GRU.py
