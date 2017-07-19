@@ -295,7 +295,7 @@ class Emotion_CNN(object):
 
             print sess.run(self.word_embedding)
             print self.word_embedding
-            fw_embedding = open('multi-task_embedding_result','w')
+            fw_embedding = open('multi-task_embedding_result'+ self.embedding_type + "-" + self.test_index,'w')
             # fw_embedding.write(sess.run(self.word_embedding))
             print>> fw_embedding, "43593 200"
 
@@ -325,8 +325,8 @@ class Emotion_CNN(object):
 
 
 def main(_):
-    for i in [1]: #Pretrained and Trainable
-        for j in [0]:
+    for i in [1, 2 ]: #Pretrained and Trainable #random and Trainable
+        for j in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
             print('hhhe_ebdt{}_index{}.txt'.format(i, j))
             #sys.stdout = open('ebdt'+str(i)+'_index'+str(j)+'.txt', 'w')
             obj = Emotion_CNN(
