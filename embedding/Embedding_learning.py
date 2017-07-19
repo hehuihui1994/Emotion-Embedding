@@ -295,7 +295,7 @@ class Emotion_CNN(object):
 
             print sess.run(self.word_embedding)
             print self.word_embedding
-            fw_embedding = open('multi-task_embedding_result'+ self.embedding_type + "-" + self.test_index,'w')
+            fw_embedding = open('multi-task_embedding_result'+ str(self.embedding_type) + "-" + str(self.test_index),'w')
             # fw_embedding.write(sess.run(self.word_embedding))
             print>> fw_embedding, "43593 200"
 
